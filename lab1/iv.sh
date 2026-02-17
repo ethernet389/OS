@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-[[ "$PWD" = "$HOME" ]] && exit
-
-echo "Error: current dir is not $HOME"
-exit 1
+if [[ "$PWD" = "$HOME" ]]; then
+  echo "$HOME"
+else
+  echo "Error: current dir is not $HOME"
+  exit 1
+fi
