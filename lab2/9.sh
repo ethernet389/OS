@@ -24,5 +24,7 @@ for proc_fpath in /proc/*; do
 done
 
 sort -n $tmp_file \
-	| awk '{ printf "ProcessID=%s : ParentProcessID=%s : Average_Running_Time=%s\n", $2, $1, $2 }' \
+	| awk '{ printf "ProcessID=%s : ParentProcessID=%s : Average_Running_Time=%s\n", $2, $1, $3 }' \
 	| tee process_info.log
+
+rm $tmp_file
