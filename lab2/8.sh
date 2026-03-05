@@ -4,4 +4,4 @@
 
 # Not good at all
 top_troubleshooting_amd64 &
-top -p $!
+top -p $! -d 1
